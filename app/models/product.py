@@ -1,8 +1,8 @@
 from .db import db, environment, SCHEMA, add_prefix_for_prod
 import datetime
 
-class Item(db.Model):
-    __tablename__ = 'items'
+class Product(db.Model):
+    __tablename__ = ' products'
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
 

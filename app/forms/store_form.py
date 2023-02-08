@@ -3,7 +3,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired, ValidationError
 from app.models import Store
 
-class StoreEditorForm(FlaskForm):
+class StoreForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
     about= StringField('About', validators=[DataRequired()])
     cover_image_url = StringField('Cover Image Url')

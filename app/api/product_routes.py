@@ -8,7 +8,7 @@ from datetime import datetime
 product_routes = Blueprint('products', __name__)
 
 # get all products
-@product_routes.route('/'):
+@product_routes.route('/')
 def get_all_products():
     products = Product.query.order_by(Product.created_date.desc()).all()
     return jsonify([product.to_dict() for product in products]), 200

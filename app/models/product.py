@@ -36,7 +36,7 @@ class Product(db.Model):
             'updated_date': self.updated_date
         }
 
-    def preview_item_to_dict(self):
+    def preview_product_to_dict(self):
         return {
             'id': self.id,
             'name': self.name,
@@ -48,7 +48,7 @@ class Product(db.Model):
             'Store': self.store.preview_store_to_dict()
         }
 
-    def store_item_to_dict(self):
+    def store_product_to_dict(self):
         return {
             'id': self.id,
             'name': self.name,
@@ -59,7 +59,7 @@ class Product(db.Model):
             'updated_date': self.updated_date,
         }
 
-    def full_item_to_dict(self):
+    def full_product_to_dict(self):
         return {
             'id': self.id,
             'name': self.name,

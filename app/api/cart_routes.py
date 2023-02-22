@@ -62,7 +62,7 @@ def delete_item_from_cart(cart_id, product_id):
     if request.method == 'DELETE':
         cart = Cart.query.filter(Cart.id == cart_id).first()
         product = Product.query.filter(Product.id == product_id).first()
-        cart_item = Cart_Item.query.filter(Cart_Item.item_id == item.id, Cart_Item.cart_id == cart.id).first()
+        cart_item = Cart_Item.query.filter(Cart_Item.product_id == product.id, Cart_Item.cart_id == cart.id).first()
         if cart:
             if product:
                 if cart_item:

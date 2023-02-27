@@ -2,6 +2,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import cartReducer from './carts';
 import productReducer from './products';
+import reviewsReducer from './reviews';
 import session from './session'
 import storeReducer from './stores';
 

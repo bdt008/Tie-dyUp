@@ -95,7 +95,7 @@ export const getSingleProduct = (productId) => async (dispatch) => {
 };
 
 //Create a product
-export const createNewProduct = (product) => async (dispatch) {
+export const createNewProduct = (product) => async (dispatch) => {
     const { name, description, price, image_url, brand, catagory } = product;
 
     const res = await fetch("/api/products/", {
@@ -169,6 +169,6 @@ export default function productReducer (state = initialState, action) {
             delete newState[action.productId];
             return newState;
         default:
-            return state; 
+            return state;
     }
 }

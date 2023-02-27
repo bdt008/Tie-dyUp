@@ -1,6 +1,4 @@
 
-//import csrf
-
 //constants
 const GET_ALL_STORES = "GET_ALL_STORES";
 const GET_USER_STORES = "GET_USER_STORES";

@@ -2,7 +2,7 @@ from .db import db, environment, SCHEMA, add_prefix_for_prod
 import datetime
 
 class Product(db.Model):
-    __tablename__ = ' products'
+    __tablename__ = 'products'
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
 
@@ -19,7 +19,7 @@ class Product(db.Model):
 
     cart_items = db.relationship("Cart_Item", back_populates = 'items_in_cart', cascade='all, delete-orphan')
     product_reviews = db.relationship("Review", back_populates = 'product', cascade='all, delete-orphan')
-    store =  db.relationship("Store", back_populates = 'store_items')
+    store =  db.relationship("Store", back_populates = 'store_products')
 
 
     def to_dict(self):

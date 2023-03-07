@@ -14,6 +14,7 @@ class Store(db.Model):
     created_date = db.Column(db.DateTime, default=datetime.datetime.now, nullable=False)
     updated_date = db.Column(db.DateTime, default=datetime.datetime.now, nullable=False)
 
+    # These are attributes. They dont appear on your table but we can still use them when querying for our data
     store_reviews = db.relationship("Review", back_populates = 'store', cascade='all, delete-orphan')
     user = db.relationship("User", back_populates = 'my_store')
     store_products = db.relationship("Product", back_populates = 'store', cascade='all, delete-orphan')
